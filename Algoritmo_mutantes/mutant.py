@@ -1,18 +1,23 @@
 import random
+import numpy as np
 
-'''dna = [
+# A modo de ejemplo para testear
+'''dna = np.array([
     ['A', 'G', 'G', 'T', 'T', 'A'],
-    ['T', 'A', 'C', 'C', 'G', 'G'],
-    ['G', 'G', 'A', 'T', 'G', 'G'],
-    ['C', 'C', 'T', 'A', 'T', 'T'],
+    ['T', 'A', 'C', 'C', 'A', 'G'],
+    ['G', 'G', 'G', 'A', 'G', 'G'],
+    ['C', 'C', 'A', 'A', 'T', 'T'],
     ['C', 'C', 'T', 'T', 'G', 'G'],
     ['C', 'C', 'T', 'T', 'G', 'G']
-]'''
+])'''
 
+
+# Genera una matriz de DNA aleatoria
 class generateDNA:
     def __init__(self):
+        size = random.randint(4, 10)
         data = 'ATCG'
-        self.dna = [[random.choice(data) for i in range(6)] for j in range(6)]
+        self.dna = np.array([[random.choice(data) for i in range(size)] for j in range(size)])
         
     def __str__(self):
         return '\n'.join([''.join(i) for i in self.dna])
@@ -47,15 +52,43 @@ def isMutant(dna):
         mutant = ''
 
     #buqueda cada diagonal
-    #No logro aun realizar esta opcion.
+    diags = [dna[::-1,:].diagonal(i) for i in range(dna.shape[0]+1,dna.shape[1])]
+    diags2= [dna[::-1,:].diagonal(-i) for i in range(-dna.shape[0]+1,dna.shape[1])]
+
+    diags.extend(dna.diagonal(i) for i in range(dna.shape[1]-1,-dna.shape[0],-1))
+    diags2.extend(dna.diagonal(i) for i in range(dna.shape[1]-1,dna.shape[0],-1))
+    arr = ([n.tolist() for n in diags])
+    arrInv = ([n.tolist() for n in diags2])
+
+    ltr = [str(arr).replace(",","").replace(" ", "").replace("'","").replace("[","").replace("]","|")]
+    rtl = [str(arrInv).replace(",","").replace(" ", "").replace("'","").replace("[","").replace("]","|")]
+
+    for i in range(len(arr)):
+        for letter in arr[i]:
+            mutant += letter
+        #print('mutant: ', mutant)
+        for i in mutantList:
+            if mutant.find(i) != -1:
+                print('mutant diag: ', mutant)
+                return True
+        mutant = ''
+    for i in range(len(arrInv)):
+        for letter in arrInv[i]:
+            mutant += letter
+        #print('mutant: ', mutant)
+        for i in mutantList:
+            if mutant.find(i) != -1:
+                print('mutant diag: ', mutant)
+                return True
+        mutant = ''
     
+    return False
 
 def main():
-    for i in range(10):
-        dna = generateDNA()
-        print('===========================================================')
-        print(dna)
-        print(isMutant(dna.dna))
+    dna = generateDNA()
+    print('===========================================================')
+    print(dna)
+    print(isMutant(dna.dna))
 
 if __name__ == '__main__':
     main()
