@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fd8dc94-2260-461a-b63c-d39e2ef72f43" name="Changes" comment="" />
+    <list default="true" id="90d620a3-c707-4cca-af44-aee38268eaf3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -20,7 +22,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2HrQhOALmDzQMmB41XcvqjgNVdp" />
+  <component name="ProjectId" id="2HrMYAWuOnz54QiyHsUWSN7m9sx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -28,32 +30,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maria/Documents/disenio_de_sistemas/madeInJava/FactoryMethod&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="Singleston" type="Application" factoryName="Application">
+    <configuration name="AbstractFactory" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Singleston" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Singleston" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Singleston" />
-      <option name="filePath" />
+      <module name="AbstractFactory" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -62,13 +49,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5fd8dc94-2260-461a-b63c-d39e2ef72f43" name="Changes" comment="" />
-      <created>1669040842313</created>
+      <changelist id="90d620a3-c707-4cca-af44-aee38268eaf3" name="Changes" comment="" />
+      <created>1669038795663</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1669040842313</updated>
-      <workItem from="1669040843483" duration="605000" />
-      <workItem from="1669041551627" duration="38000" />
+      <updated>1669038795663</updated>
+      <workItem from="1669038796854" duration="2022000" />
     </task>
     <servers />
   </component>
